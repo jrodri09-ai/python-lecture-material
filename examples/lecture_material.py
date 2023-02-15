@@ -207,6 +207,10 @@ print(youAreAStar)
 #print("The volume of the rectangular prism is" + str(calculate_volume_rectangular_prism(length, width, height)) + "cubic feet.")
 
 
+import random #this is a generic import
+
+print(random.randint(1,10))
+
 
 
 
