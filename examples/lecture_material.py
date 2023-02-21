@@ -206,10 +206,25 @@ print(youAreAStar)
 
 #print("The volume of the rectangular prism is" + str(calculate_volume_rectangular_prism(length, width, height)) + "cubic feet.")
 
-
-import random #this is a generic import
+# this is a generic import
+import random
 
 print(random.randint(1,10))
+
+
+# function import is when a specific function is imported from a module
+from random import randint
+
+print(randint(10, 20))
+
+# universal import: when you import every function from a module so that whenever you call any function from that module
+# you do not need to type that modules name and a period
+
+from random import *
+
+print(random())
+
+
 
 
 

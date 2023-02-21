@@ -1,0 +1,30 @@
+import random
+
+print(random.randint(10, 25))
+
+gallons = int(input("please enter your first randomly generated number for gallons"))
+
+print(random.randint(200, 400))
+
+miles = int(input("Please enter your second randomly generated number for miles"))
+
+
+def miles_per_gallon (miles,gallons):
+    return miles//gallons
+
+print( "miles per gallon equals " + str(miles_per_gallon(miles,gallons))+ " miles")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
