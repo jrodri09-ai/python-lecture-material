@@ -12,6 +12,7 @@ miles = int(input("Please enter your second randomly generated number for miles"
 def miles_per_gallon (miles,gallons):
     return miles//gallons
 
+
 print( "miles per gallon equals " + str(miles_per_gallon(miles,gallons))+ " miles")
 
 

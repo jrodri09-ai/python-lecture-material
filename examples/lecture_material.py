@@ -224,6 +224,127 @@ from random import *
 
 print(random())
 
+# in python you can have a variable within a function that has the same name as a variable outside of that function. However
+# despite having the same name those variables are not the same variable
+
+example = "hello world" # global
+
+def loc_ex():
+    example = "this is a string" # local
+    return example
+
+
+print(example)
+print(loc_ex())
+
+# Understanding variable scope
+# Local variables cannot be used by code in the global scope.
+# Global variables can be accessed by code in a local scope.
+# The local scope of one function can't use variables from another function's local scope.
+# You can use the same name for different variables as long as they are in different scopes.
+
+
+# Examples
+# Local variables cannot be used by code in the global scope.
+
+#def loc_ex():
+    #breakfast = "waffles"
+    #return breakfast
+
+#loc_ex()
+#print(breakfast)
+# this cannot be printed because it is outside the local scope of the variable (global)
+
+
+
+# Global variables can be accessed by code in the local scope.
+
+
+#def print_glob():
+    #loc_var = " that is very long "
+    #print(glob_var + loc_var)
+
+
+#glob_var = "This is a string"
+#print_glob()
+
+# The local scope of one function can't use variables
+# from another function's local scope
+
+
+#def first():
+    #loc = 2
+    #return loc
+
+
+#def second():
+    #return loc
+
+
+#first()
+#second()
+
+# You can use the same name for different variables as long as they are in different scopes.
+
+
+def loc_ex1():
+    fruit = "pear"
+    print(fruit)
+
+
+# def loc_ex2():
+    # fruit = "bananas"
+    # print(fruit)
+
+
+# fruit = "apple"
+# loc_ex1()
+# loc_ex2()
+# print(fruit)
+
+# If you wanted to assign a global variable a new value from within a function you could do so using global statements
+
+def loc_ex():
+    global fruit
+    fruit = "pear"
+    print(fruit)
+
+
+fruit = 'apple'
+loc_ex()
+print(fruit)
+
+
+# having scope's compartmentalizes problems and helps to quickly give you a better idea of where a problem involving a
+# variable is happening within your code
+# Because of the way local scopes are created and destroyed in functions programmers don't need to worry about code
+# within each individual local scope affecting things outside of it, weather that is code in the global scope or another
+# function's local scope provided
+
+# comparison operators
+# >
+# <
+# >=
+# <=
+# !=
+# ==
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
