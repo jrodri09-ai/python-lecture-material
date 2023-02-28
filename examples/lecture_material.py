@@ -329,6 +329,50 @@ print(fruit)
 # !=
 # ==
 
+print(4 > 3)   # greater than
+print(1 > 3)
+print(4 < 6)   # less than
+print(3 < 3)
+print(9 >= 9)  # greater than or equal to
+print(1 <= 2)  # less than or equal to
+print(10 != 100)  # not equal to, this can also be used to compare strings
+print(10 != 10)
+print(10 == 100)
+print(10 == 10)  # is equal to, this can also be used to compare strings
+
+# floats and integers can be equivalent
+print(4.0 >= 4)
+print(4.0 <= 4)
+print(4.0 == 4)
+
+# boolean operators
+# and
+# or
+# not
+
+# and
+print(4 > 1 and "word" == "word")  # True and True
+print(8.76 == 8.7600 and 2 != 2)   # True and False
+print("earth" == "Earth" and 6 <= 3)    # False and False
+print(10 == 5 and 10 != 5) # False and True
+
+# or : the or boolean operator only returns false if what is to the left of it and what is to the right of it, both
+# evaluate to false in any other case (if there is one true the whole thing is true)
+
+print(4 > 1 or "word" == "word")    # True or True
+print(8.76 == 8.7600 or 2 != 2 )      # True or False
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
