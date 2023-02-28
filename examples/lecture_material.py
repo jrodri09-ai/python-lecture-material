@@ -359,8 +359,13 @@ print(10 == 5 and 10 != 5) # False and True
 # or : the or boolean operator only returns false if what is to the left of it and what is to the right of it, both
 # evaluate to false in any other case (if there is one true the whole thing is true)
 
-print(4 > 1 or "word" == "word")    # True or True
-print(8.76 == 8.7600 or 2 != 2 )      # True or False
+print(4 > 1 or "word" == "word")       # True or True
+print(8.76 == 8.7600 or 2 != 2)        # True or False
+print("earth" == "Earth" or 6 <= 3)    # False or False
+print(10 == 5 or 10 != 5)              # False or True
+
+print(not 6482 > 0)                    # not True
+print(not "Python" != "Python")        # not False
 
 
 
