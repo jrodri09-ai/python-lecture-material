@@ -54,10 +54,10 @@
 
 ex2 = (123 + 280) / 100
 
-print(ex2)
+# print(ex2)
 
 ex3 = 1.23 + 2.80
-print(round(ex3, 2))
+# print(round(ex3, 2))
 
 # subtotal of shopping list
 
@@ -75,65 +75,65 @@ meatballs = 4.39
 
 subtotal = round((pasta + sauce + cloves + seasoning + baguettes + meatballs),2)
 
-print(subtotal)
+# print(subtotal)
 
 string1 = 'welcome user'
 
-print(string1)
+# print(string1)
 
 ex_string2 = "orange"
-print(ex_string2[2])
+# print(ex_string2[2])
 
 ex_string3 = "apple"
-print(ex_string3[3])
-print(ex_string3[:3])
+# print(ex_string3[3])
+# print(ex_string3[:3])
 
 ex_string4 = "apricots"
 
-print(ex_string4[:3])
-print(ex_string4[2:5])
-print(ex_string4[4:])
+# print(ex_string4[:3])
+# print(ex_string4[2:5])
+# print(ex_string4[4:])
 
 concatenated = "R2" + "-" + "D2"
 
-print(concatenated)
-print(concatenated[1])
-print(concatenated[0:2])
+# print(concatenated)
+# print(concatenated[1])
+# print(concatenated[0:2])
 
 myName = "Jessica" + "Grace" + "Rodriquez"
 
-print(myName)
+# print(myName)
 
 nike = "Just do it!"
 
-print(nike[10])
-print(nike[5:8])
-print(nike[8:11])
-print(nike[0:4])
+# print(nike[10])
+# print(nike[5:8])
+# print(nike[8:11])
+# print(nike[0:4])
 
-print("Don't " + nike[5:])
+# print("Don't " + nike[5:])
 
 ex_1 = str(True)
 ex_2 = str(29)
 ex_3 = str(3.2789)
 
-print(type(ex_1))
-print(type(ex_2))
-print(type(ex_3))
+# print(type(ex_1))
+# print(type(ex_2))
+# print(type(ex_3))
 
-print("Hello\tfrom\tthe\tother\tside.")
-print("line one\nline two")
-print("\"Love is all you need.\"")
+# print("Hello\tfrom\tthe\tother\tside.")
+# print("line one\nline two")
+# print("\"Love is all you need.\"")
 
 ex_4 = str(6.2389)
 
-print(type(ex_4))
-print(ex_4 + " is a float")
-print("\"Hello, I'm Jessica, its nice to meet you!\"")
+# print(type(ex_4))
+# print(ex_4 + " is a float")
+# print("\"Hello, I'm Jessica, its nice to meet you!\"")
 
 youAreAStar = "*******\n ***** \n ***\n *"
 
-print(youAreAStar)
+# print(youAreAStar)
 
 
 # name = input("What is your name?")
@@ -209,20 +209,20 @@ print(youAreAStar)
 # this is a generic import
 import random
 
-print(random.randint(1,10))
+# print(random.randint(1,10))
 
 
 # function import is when a specific function is imported from a module
 from random import randint
 
-print(randint(10, 20))
+# print(randint(10, 20))
 
 # universal import: when you import every function from a module so that whenever you call any function from that module
 # you do not need to type that modules name and a period
 
 from random import *
 
-print(random())
+# print(random())
 
 # in python you can have a variable within a function that has the same name as a variable outside of that function. However
 # despite having the same name those variables are not the same variable
@@ -234,8 +234,8 @@ def loc_ex():
     return example
 
 
-print(example)
-print(loc_ex())
+# print(example)
+# print(loc_ex())
 
 # Understanding variable scope
 # Local variables cannot be used by code in the global scope.
@@ -289,7 +289,7 @@ print(loc_ex())
 
 def loc_ex1():
     fruit = "pear"
-    print(fruit)
+    # print(fruit)
 
 
 # def loc_ex2():
@@ -307,12 +307,12 @@ def loc_ex1():
 def loc_ex():
     global fruit
     fruit = "pear"
-    print(fruit)
+    # print(fruit)
 
 
 fruit = 'apple'
 loc_ex()
-print(fruit)
+# print(fruit)
 
 
 # having scope's compartmentalizes problems and helps to quickly give you a better idea of where a problem involving a
@@ -392,16 +392,31 @@ print(fruit)
 # to tell Python that they are statements that are meant to be nested within other statements
 # the code within these nested else statements must be indented another four spaces
 
-gpa = float(input("What was the applicants grade point average?"))
-inst_app = input("Is the student going to be educated at an approved institution?")
+# gpa = float(input("What was the applicants grade point average?"))
+# inst_app = input("Is the student going to be educated at an approved institution?")
 
-if gpa >= 3.7:
-    if inst_app == "yes":
-        print("The applicant qualifies fot a for a low APR student loan.")
-    else:
-        print("The applicant does not qualify since they have not been accepted into an approved institution.")
+# if gpa >= 3.7:
+    # if inst_app == "yes":
+        # print("The applicant qualifies fot a for a low APR student loan.")
+    # else:
+        # print("The applicant does not qualify since they have not been accepted into an approved institution.")
+# else:
+    # print("The applicant did not have high enough grades to qualify.")
+
+
+# elif statements
+user_num = int(input("Please enter an integer."))
+
+if user_num < 0:
+    print("The number you entered is less than O.")
+elif user_num == 0:
+    print("The number you entered is 0.")
+elif 0 < user_num <= 100:
+    print("The number you entered can be 1, 100, or anything in between.")
 else:
-    print("The applicant did not have high enough grades to qualify.")
+    print("The number you entered is greater than 100.")
+
+
 
 
 
