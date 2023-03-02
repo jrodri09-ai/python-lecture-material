@@ -371,12 +371,12 @@ print(fruit)
 # if True:
 #    "Do the stuff here" (indent four spaces)
 
-veg = input("Type the name of the vegetable.")
+# veg = input("Type the name of the vegetable.")
 
-if veg == "corn":
-    print("The vegetable is corn.")
-else:
-    print("The vegetable is not corn.")
+# if veg == "corn":
+    # print("The vegetable is corn.")
+# else:
+    # print("The vegetable is not corn.")
 
 # else statements : when used after if statements and other flow control statements, else statements allow programmers
 # to give their programs code that will be executed if no other flow control statements have had their conditions
@@ -386,6 +386,29 @@ else:
 #    "Do the stuff here"
 # else:
 #    "Do this instead"
+
+# nested if and else statements : putting if and else statements within other if and else statements
+# if you want to nest statements within other statements you need to make sure that they are indented four spaces for
+# to tell Python that they are statements that are meant to be nested within other statements
+# the code within these nested else statements must be indented another four spaces
+
+gpa = float(input("What was the applicants grade point average?"))
+inst_app = input("Is the student going to be educated at an approved institution?")
+
+if gpa >= 3.7:
+    if inst_app == "yes":
+        print("The applicant qualifies fot a for a low APR student loan.")
+    else:
+        print("The applicant does not qualify since they have not been accepted into an approved institution.")
+else:
+    print("The applicant did not have high enough grades to qualify.")
+
+
+
+
+
+
+
 
 
 
