@@ -405,16 +405,57 @@ loc_ex()
 
 
 # elif statements
-user_num = int(input("Please enter an integer."))
+#user_num = int(input("Please enter an integer."))
 
-if user_num < 0:
-    print("The number you entered is less than O.")
-elif user_num == 0:
-    print("The number you entered is 0.")
-elif 0 < user_num <= 100:
-    print("The number you entered can be 1, 100, or anything in between.")
-else:
-    print("The number you entered is greater than 100.")
+#if user_num < 0:
+    #print("The number you entered is less than O.")
+#elif user_num == 0:
+    #print("The number you entered is 0.")
+#elif 0 < user_num <= 100:
+    #print("The number you entered can be 1, 100, or anything in between.")
+#else:
+    #print("The number you entered is greater than 100.")
+
+
+# Truthy and Flasey Statements
+# for strings anything other than an empty string is a truthy, this is equivalent to boolean true value
+# an empty string is a falsey, false boolean value
+# for integers, zero is the falsey value, any integers other than zero are truthy
+# for floats 0.0 is falsey, anything other than that is truthy.
+
+# strings_example = input("Enter any string other than an empty one.")
+
+# if strings_example != "":
+    # print("Thank you for entering something.")
+# else:
+    # print("You did not enter a string.")
+
+# bool() function : can tell you the equivalent boolean value of anything.
+
+
+
+
+
+# Loops are a useful tool for when you want to have code run on every item in a piece of data that has indexes such as
+# a string.
+
+# while loops
+# A while loop runs its code each time it checks is condition and it turns out to be true.
+# while loop stops running its code when its condition evaluates to false.
+
+counter = 0
+
+while counter < 3: # while, a condition which evaluates to a boolean value, a colon, code that loop will run
+    print("something")
+    counter += 1
+
+# Avoiding infinite loops : need to make sure that each while loop you create has a condition that stops it from running
+# an infinite amount of times.
+# a while loop that has and end caused by its condition is known as a closed loop.
+
+
+
+
 
 
 
