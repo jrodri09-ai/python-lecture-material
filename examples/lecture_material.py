@@ -443,15 +443,53 @@ loc_ex()
 # A while loop runs its code each time it checks is condition and it turns out to be true.
 # while loop stops running its code when its condition evaluates to false.
 
-counter = 0
+# counter = 0
 
-while counter < 3: # while, a condition which evaluates to a boolean value, a colon, code that loop will run
-    print("something")
-    counter += 1
+# while counter < 3: # while, a condition which evaluates to a boolean value, a colon, code that loop will run
+    # print("something")
+    # counter += 1
 
 # Avoiding infinite loops : need to make sure that each while loop you create has a condition that stops it from running
 # an infinite amount of times.
 # a while loop that has and end caused by its condition is known as a closed loop.
+
+
+# For Loops : useful because it is a type of loop that is controlled by the length of the iterable piece of data that is
+# being used rather than a condition
+
+# word = "house"
+
+# for letter in word:
+    # print(letter)
+
+# range
+
+# one_input = range(5)
+
+# for num in one_input:
+    # print(num)
+
+
+# two_inputs = range(5, 10)
+
+# for num in two_inputs:
+    # print(num)
+
+# for a range with three arguments the third argument is called step size and can be used to increment up or down since
+# it can be positive or negative
+
+# three_inputs = range(6, -1, -2)
+
+# for num in three_inputs:
+    # print(num)
+
+
+
+for num in range(1, 51):
+    if num % 3 == 0 and num % 5 == 0:
+        print("Fizz Buzz")
+
+
 
 
 
