@@ -484,6 +484,110 @@ loc_ex()
     # print(num)
 
 
+# String Methods : functions that are built into Python, which allow you to perform useful operations such as splitting
+# them or changing their case so that they can be used as part of non-case-sensitive comparisons with other strings.
+# characters like spaces and punctuation are not affected by the upper and lower methods.
+
+all_low = "there are no capitals here."
+print(all_low.upper())
+print(all_low)
+all_up = "THIS IS SHOUTING TEXT!"
+print(all_up.lower())
+
+# .isupper() the upper method returns a boolean value of true if the letters in the string it is being used
+# are all uppercase
+
+print("Mixed Case".isupper())  # this returns false
+print("ALL CAPS!".isupper())   # this returns true
+
+# .islower() the is lower method returns a boolean value of true if the letters in the string being used are all
+# lowercase
+
+print("AAAHHH".islower())  # this returns false
+print("$100 is a lot to make in an hour.".islower())  # this returns true
+
+# While they can be used on strings that contain no spaces, punctuation and special characters such as ampersands and
+# asterisks, the .isupper and .islower method's will only return true for strings that have at least one uppercase
+# letter or one lowercase letter in them, respectively.
+
+# can use multiple string methods
+
+print("SHOUT!".lower().isupper())
+print("This Is An Example Of Title Case".istitle())
+
+print("the great gatsby".title())  # this turns a string into a title sentence
+
+print("this is a string".startswith("this"))
+print("this is a string".endswith("string"))
+
+# the .join() method is useful then you have multiple strings that you want to combine into a single string
+
+print("" .join(["one","two","three"]))
+print(" ".join(["one", "two", "three"]))
+print("," .join(["one","two","three"]))
+print(", " .join(["one","two","three"]))
+
+# the .split() method does the opposite of the joint method, meaning that when it is used on a string it splits that
+# string and returns a list
+
+print("Eggs, Milk, Waffles, Bacon".split())
+print("Eggs, Milk, Waffles, Bacon".split(", "))
+
+# .rjust() .ljust() when coupled with one argument they will return strings that have spaces added either to the left
+# or right of them
+
+print("hello world".ljust(15) + "four spaces latter.")
+
+# you can also to this with .rjust() and .ljust(), but the second argument can only be one character long and must
+# be a string
+
+print("hello world".rjust(15, "_"))
+print("hello world".ljust(15, "*"))
+
+
+# .center()
+
+print("hello world".center(15,":"))
+
+# .strip(), .rstrip(), and .lstrip() are useful for when you want to remove characters such as white spaces from a
+# string
+# .strip() removes all the spaces from both sides of the string
+# .rstrip() removes all the spaces from the right side of the string
+# .lstrip() removes all the spaces from the left side of the string
+
+print("I had an exciting trip!!!11111")
+print("I had an exciting trip!!!11111".strip("1"))
+print("I had an exciting trip!!!11111".rstrip("1"))
+print("I had an exciting trip!!!11111".lstrip("1"))
+
+print("juice, bread, cheese, beef, bread".rstrip(", bread"))
+
+print("blueblueyellowblue".strip("eulb"))  # strip removes characters from either side of the string
+
+# .replace() is a string method which is used to search for and replace a string, it takes two strings as arguments, the
+# first is the string that will be searched for when it is called, the second is the string that will replace the first
+# string
+
+print("Good morning.".replace("morning","afternoon"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
