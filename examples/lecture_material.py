@@ -570,6 +570,9 @@ print("blueblueyellowblue".strip("eulb"))  # strip removes characters from eithe
 
 print("Good morning.".replace("morning","afternoon"))
 
+# len()
+print(len("tree"))
+
 
 
 
