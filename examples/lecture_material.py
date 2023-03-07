@@ -573,6 +573,21 @@ print("Good morning.".replace("morning","afternoon"))
 # len()
 print(len("tree"))
 
+# .format() will allow is to put curly brackets inside of a string to mark where we want other strings to be. Less
+# messy alternative to concatination
+
+name = input("What is the job applicant's name?")
+degree = input("What did they major in at college?")
+job = input("What is their current occupation?")
+experience = input("How many years have they been working in the field?")
+
+print("{} majored in {}, works as a {}, and has {} years of experience.".format(name, degree, job, experience))
+
+
+
+
+
+
 
 
 
