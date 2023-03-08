@@ -576,15 +576,37 @@ print(len("tree"))
 # .format() will allow is to put curly brackets inside of a string to mark where we want other strings to be. Less
 # messy alternative to concatination
 
-name = input("What is the job applicant's name?")
-degree = input("What did they major in at college?")
-job = input("What is their current occupation?")
-experience = input("How many years have they been working in the field?")
+# name = input("What is the job applicant's name?")
+# degree = input("What did they major in at college?")
+# job = input("What is their current occupation?")
+# experience = input("How many years have they been working in the field?")
 
-print("{} majored in {}, works as a {}, and has {} years of experience.".format(name, degree, job, experience))
+#print("{} majored in {}, works as a {}, and has {} years of experience.".format(name, degree, job, experience))
+
+# arr = [1,2,2,3,4,5,5,5,6,7,8,8,9]
+
+# print(tuple(set([x for x in arr if arr.count(x)>1])))
 
 
+# list is a data type which contains multiple values in an ordered sequence values within a list are also known as items
+# a list can contain as many items as you want and can contain values of any data type, can even contain list
+# which would be known as a list of lists
+# can have different data types within the same list
+# list() function takes an iterable data type, such as a string as an argument and converts it to a list that it then
+# returns
 
+example_list_1 = [5, 4, 3, 2, 1]
+
+print(list("blah"))
+
+# in and not in operators can be used to check whether a value is or isn't in a list like other operators they are used
+# in expressions
+
+checked_list = [1, 2, 3, 4]
+print(8 in checked_list)
+not_in_example = 8 not in checked_list  # this returns true, the not in operator would return false if it was used on a
+# value which checked_list contained
+print(not_in_example)
 
 
 
