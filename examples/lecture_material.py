@@ -651,6 +651,103 @@ print(example)
 example[4:7] = [7, 6, 5]
 print(example)
 
+# del and list methods : the methods for this lecture are specific to the list data type
+# del statements allow you to delete values from a list
+
+planets = ["pluto", "mars", "earth", "venus"]
+del planets[0]
+print(planets)
+
+# .remove() method allows you to remove what you pass it as an argument from a list
+
+# planets.remove("pluto")
+# print(planets)
+
+colors = ["blue", "red", "white", "blue", "orange", "blue"]
+colors.remove("blue")
+print(colors)
+
+# in this case the .remove() would remove the first instance of blue only
+
+# del vs. .remove() del removes an item based off index number of the item being removed.
+# .remove() searches a list for whatever item you passed it as an argument and removes it from the list when it finds
+# that item
+# .remove() gets rid of a specific item if it finds it, regardless of where it is located in a list.
+# dell just deletes an item from an index
+# .append() takes an argument and adds that to the end of the list it is being used on.
+
+pets = ["cat", "dog", "parrot"]
+print(pets)
+pets.append("fish")
+print(pets)
+
+# .insert() allows you to add an item anywhere in the list rather than just at its end.
+# .insert() takes two arguments where the first argument is the index at which a new item will be added to a list
+# and the second item is the item that will be added to the list at that index
+
+pets.insert(1, "turtle")
+print(pets)
+
+# .sort() method can be used to sort list made up of items that are all numbers or strings (will be alphabetical)
+
+numb_list = [2.718, 4, -19, 10000, 0]
+print(numb_list)
+numb_list.sort()
+print(numb_list)
+
+str_list = ["Jessica", "Shaun", "EJ", "Nathan", "Liv"]
+print(str_list)
+str_list.sort()
+print(str_list)
+
+# reverse=True to sort items from a list in reverse order. So for numbers this would be greatest to least and for
+# strings it would be in the reverse alphabetical order
+# the .sort() method cannot be used on mixed lists, it does not have a way to compare strings and numbers
+# .sort() only works on lists with ints, floats, or boolean values (False = 0, True = 1)
+
+# ASCIIbetical order uppercase letters come before lowercase letters
+ASCIIbetical = ["Andy", "kiwi", "apple", "Karen", "Brian", "banana"]
+ASCIIbetical.sort(key=str.lower)
+print(ASCIIbetical)
+
+# use key=str.lower if you want to sort a list with mixed case in alphabetical order
+
+# .index() the index list method allows you to find out the index number of the item you pass it. When called the
+# .index() method returns an index number as an integer
+# if you try to use this method on an item that does not appear in the list you will get an error message
+
+metals = ["copper", "gold", "silver", "iron"]
+# print(metals.index("silver"))
+
+numbers = [4, 3, 2, 1, 0, 1, 2, 3, 4]
+print(numbers.index(3))
+
+# when using .index() on a list where an item appears multiple times it will give you the index number of the first
+# time that item appears on the list
+
+# .pop() method removes and returns an item from a list, would use this instead of .remove() or .dell() of you wanted
+# the item returned to you so you could use it in some other way.
+
+bands = ["Queen", "Led Zeppelin", "The Beatles", "MUSE", "Radiohead"]
+end = bands.pop(3)
+print(bands)
+print(end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
