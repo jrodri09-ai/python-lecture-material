@@ -813,6 +813,43 @@ ex_18 = "hello " + \
 print(ex_18)
 
 
+# dictionaries : are a data type which can store a collection of values like a list, but differs in that instead of
+# having to have each of its items be assigned an index number that is an integer, the items that a dictionary
+# contains are assigned to keys, which can be different data types
+
+consoles = {"nintendo": "wii", "microsoft": "xbox", "sony": "playstation"}
+print(consoles["microsoft"])
+val = consoles["microsoft"]
+print(val)
+print("The " + consoles["sony"] + " 4 is Sony's newest gaming console.")
+
+# a key value pair consists of a key and a value separated by a colon or a space, can have multiple pairs just make
+# sure to separate them with a comma and a space
+# you can use keys to access values from a dictionary, like you would use index numbers access the items in a list
+# values from dictionaries can also be assigned to variables and used in expressions
+# keys can be integers, floats or even boolean values, can have different data types for different keys in the same,
+# dictionary
+# unlike lists dictionaries are unordered, lists need to have the exact same items in the exact same order in order for
+# python to consider them equivalent
+
+print([2, 4, 6] == [2, 4, 6])
+print([2, 4, 6] == [6, 4, 2])
+
+# two dictionaries being compared, both need to contain the same key value pairs in order to be considered equal but
+# these pairs do not need to be in the same order
+
+first = {0: 2.1, 1: 2.2, 2: 2.3, 3: 2.4}
+second = {2: 2.3, 0: 2.1, 3: 2.4, 1: 2.2}
+print(first == second)
+
+# key error : if you tried to access a value from a key that doesn't exist within a dictionary.
+# can check whether a key exists within a dictionary by using the in and not in operators
+
+print(0 in first)
+print(1 not in first)
+
+
+
 
 
 
