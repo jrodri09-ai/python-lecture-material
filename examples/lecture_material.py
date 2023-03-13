@@ -733,11 +733,84 @@ end = bands.pop(3)
 print(bands)
 print(end)
 
+# lists = mutable
+# strings = immutable
 
 
+ex_1 = [1, 2, 3]
+ex_1[1] = 5
+print(ex_1)
 
+ex_2 = "123"
+ex_2 = "153"
+print(ex_2)
 
+# creating new strings from old strings : access by index or slicing and using those
+# parts to create a new string through concatination
 
+ex_3 = "No, you can't."
+ex_4 = "Yes" + ex_3[3:11] + "!"
+print(ex_4)
+
+# references : when a list is assigned to a variable instead of the variable actually storing that list like it would
+# a number or a string, it stores a reference to that list, which is a value that points to a piece of data such as a
+# list. So not the list itself.
+
+ex_5 = 3.14
+ex_6 = "coconut"
+ex_7 = ex_5
+ex_8 = ex_6
+print(ex_7)
+print(ex_8)
+
+ex_9 = [1, 2, 3, 4, 5]
+ex_10 = ex_9
+ex_10[2] = 4
+print(ex_9)
+print(ex_10)
+
+# ex_10 and ex_9 are referencing the same list
+# all mutable data types are stored as references and all immutable are stored as themselves
+# doing this saves memory
+
+# copy module and deepcopy() will allow you to create a copy of a list with its own new reference
+
+import copy
+ex_12 = [1, 2, 3, 4, 5]
+ex_13 = copy.deepcopy(ex_12)
+ex_13[2] = 4
+print(ex_12)
+print(ex_13)
+
+# since they don't share the same reference we can modify ex_13 w/o affecting ex_12
+
+# lists can span multiple lines of code
+
+ex_15 = ["bush",
+         "fern",
+         "tree",
+         "moss"]
+
+print(ex_15)
+
+# \ line continuation : for math make sure everything is lined up vertically to make sure code is PEP compliant
+# don't have to worry about this with strings unless they are concatenated
+
+ex_16 = 2 + \
+        4 + \
+        1
+print(ex_16)
+
+ex_17 = "The Emp\
+ire Strikes \
+Back"
+
+print(ex_17)
+
+ex_18 = "hello " + \
+        "world"
+
+print(ex_18)
 
 
 
