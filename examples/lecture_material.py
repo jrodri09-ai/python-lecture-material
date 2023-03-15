@@ -848,10 +848,52 @@ print(first == second)
 print(0 in first)
 print(1 not in first)
 
+# dictionary methods 1: .keys(), .values(), .items(), and .get()
+# the .keys() method allows you to get all the keys from a dictionary
 
+birth_years = {1994: "bill", 1969: "emily", 1982: "elizabeth", 2000: "turner"}
+print(birth_years.keys())
 
+for key in birth_years.keys():
+    print(key)
 
+# .values() is a method which allows you to get all he values from a dictionary
 
+print(birth_years.values())
+
+for values in birth_years.values():
+    print(values)
+
+# use .items() to get the values and the keys of a dictionary at the same time
+
+print(birth_years.items())
+for key, value in birth_years.items():
+    print(key, value)
+
+# can use in and not in on a value instead of a key
+
+print("elizabeth" in birth_years.values())
+
+# .get() method allows us to look for and get a key from a dictionary and return
+# something other than an error message
+
+print(birth_years.get(1975, "1975 is not a key in birth years."))
+
+# dictionaries are an immutable data type like lists, which means variables that
+# have been assigned to dictionaries also hold references to dictionaries, not
+# the dictionary values themselves
+# so if you try to  make a copy of a dictionary and assign it to a new variable
+# any changes you make to the original would also affect the original dictionary
+# because they both reference the same dictionary
+
+print(birth_years)
+people = birth_years
+people[1982] = "madeline"
+print(birth_years)
+
+# can use the length value to get the length of a dictionary
+
+print(len(birth_years))  # returns the number of key value pairs
 
 
 
