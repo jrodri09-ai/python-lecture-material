@@ -895,6 +895,33 @@ print(birth_years)
 
 print(len(birth_years))  # returns the number of key value pairs
 
+# dictionary methods 2 : .fromkeys(), .pop(), and .popitem()
+# .fromkeys() method returns a dictionary using two values that it was given as arguments, the first is the key
+# the second is a value
+
+ex_1 = {}.fromkeys(["address"], "1600 Pennsylania Ave NW")
+print(ex_1)
+
+ex_2 = {}.fromkeys("ad", "1600 Pennsylania Ave NW")
+print(ex_2)
+
+ex_2 = {"make": "Honda", "model": "civic", "year": 2016}
+popped = ex_2.pop("model")
+print(ex_2)
+print(popped)
+
+# .popitem() is a method which allows you to remove the last key value pair from a dictionary without having to
+# specify the item
+ex_3 = {"name": "bob", "age": 38, "occupation": "accountant",\
+        "workplace": "H&R block"}
+ex_3.popitem()
+print(ex_3)
+
+
+
+
+
+
 
 
 
