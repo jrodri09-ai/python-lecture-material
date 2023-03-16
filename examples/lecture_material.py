@@ -917,10 +917,46 @@ ex_3 = {"name": "bob", "age": 38, "occupation": "accountant",\
 ex_3.popitem()
 print(ex_3)
 
+# .clear() method removes everything in a dictionary that it is called on
+places_to_visit = {1: "England", 2: "Scotland", 3: "Wales", 4: "Northern Ireland"}
+print(places_to_visit)
+places_to_visit.clear()
+print(places_to_visit)
+
+# .copy() the copying method returns an exact copy of a dictionary that its own reference
+
+birth_years = {1994: "bill", 1969: "emily", 1982: "elizabeth", 2000: "turner"}
+print(birth_years)
+people = birth_years.copy()
+people[1982] = "madeline"
+print(birth_years)
+
+# .update() allows us to add key value pairs from one dictionary to another or to overwrite the values  of
+# existing keys in a dictionary with values from another dictionary.
+# takes one argument which is the dictionary you want to add the key value pairs from
+
+city_info = {"country": "Canada", "providence": "Ontario", "city": "Toronto"}
+population = {"population": 2930000}
+city_info.update(population)
+print(city_info)
+print(population)   # population remains unchanged, its contents were just added to city_info
+
+# .setdefault() if key is not found itm will add it and it's value to the dictionary, cannot change the default
+# value of key this way
+
+computers = {"Google": "Chromebook", "Apple": "MacBook", "Microsoft": "Surface Pro"}
+computers.setdefault("Lenovo", "ThinkPad")
+print(computers)
+
+# dict() function is an alternate way to create a dictionary, when you create keys using the dict function, they
+# must be made up of letters, underscores, and numbers
+# the keys in the dict function call cannot contain punctuation, special characters, and they can't be boolean values  
 
 
-
-
+empty = dict()
+print(empty)
+with_values = dict(a=1, b=2, c=3)
+print(with_values)
 
 
 
