@@ -950,7 +950,7 @@ print(computers)
 
 # dict() function is an alternate way to create a dictionary, when you create keys using the dict function, they
 # must be made up of letters, underscores, and numbers
-# the keys in the dict function call cannot contain punctuation, special characters, and they can't be boolean values  
+# the keys in the dict function call cannot contain punctuation, special characters, and they can't be boolean values
 
 
 empty = dict()
@@ -958,74 +958,193 @@ print(empty)
 with_values = dict(a=1, b=2, c=3)
 print(with_values)
 
+# tuples
 
+tuple_1 = ("a", "b", "c", "d", "e")
+tuple_2 = (2.718, False, [1, 2, 3])
+tuple_3 = (1, 1, 0, 0, 0)
+tuple_4 = (5, 4, 3, 2, 1)
 
+# can also create a dictionary using a tuple using a list or string
+# items in a tuple have an index number
 
+tuple_5 = tuple([3.14, 2.205, 10])
+tuple_6 = tuple("abcdefg")
+print(tuple_5)
+print(tuple_6)
 
+tuple_8 = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+print(tuple_8[2])
+print(tuple_8[:8])
+print(tuple_8[2:8])
+print(tuple_8[2:7])
+print(tuple_8[3:])
 
+# tuples are an immutable, they are useful when you have collection of data
+# that you know that you will not want to change later.
+# their inability to be changed will prevent unwanted changes from being
+# made to them
 
+tuple_9 = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"\
+           ,"Sunday")
+print(tuple_9)
 
+# tuples take up less space in memory than other mutable date types so they
+# are much faster than lists
 
+tuple_12 = (1, 3, 5)
+list_1 = [1, 3, 5]
+print(tuple_12.__sizeof__())
+print(tuple_1.__sizeof__())
 
+# looping through tuples
 
+major_cities = ("Tokyo", "London", "New York", "Shanghi", "Sydney")
 
+for city in major_cities:
+    print(city)
 
+counter = 0
 
+while counter < len(major_cities):
+    print(major_cities[counter])
+    counter += 1
 
+backwards = len(major_cities) - 1
+while backwards >= 0:
+    print(major_cities[backwards])
+    backwards -= 1
 
+# tuple slicing with step
 
+ints = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+print(ints[::3])    # stride length of 3
+print(ints[1::2])   # evens only
+print(ints[7::-1])  # backwards from 8
+print(ints[8::-2])  # odds only backwards
 
+# tuple methods
 
+nested = (1, 2, 3, (4, 5, 6), (7, 8, 9), (10, 11, 12))
+print(nested[4])
+print(nested[5][1])
 
+# the .count() method returns the number of times a value that appears
+# as its argument appears in a tuple
 
+repeat = (7, 3, 3, 3, 0, 0, 7, 0, 0)
+print(repeat.count(7))
+print(repeat.count(3))
+print(repeat.count(0))
 
+ints = (1, 1, 7)
+print(ints.index(7))
+print(ints.index(1))  # index number of the first time that value appears
 
 
+# intro to sets
+# sets cannot have repeating items, they get ignored
+# items in a set are unordered
 
+# set_1 = {9, 8, 7, 6}    # set literal
+# set_2 = set({"a", "b", "c", "d", "e"})
+# print(set_1)
+# print(set_2)
 
+# set_3 = set()   # empty set
+# set_4 = set(range(1, 12, 2))
+# print(set_4)
 
+# a set hold items that are of different data types
+set_5 = {"a", 3.14, 18, True}
+print(set_5)
 
+# sets cannot have their items accessed from them by index, need to use a
+# for loop if you want to access individual items
 
+set_6 = {3, 4, 5, 6, 7, 8}
 
+for num in set_6:
+    print(num)
 
 
+print(6 in set_6)
 
+# sets are useful in situations where you want a collection of items,
+# but you don't want duplicate items in the collection, and you also
+# don't care about the order of items that make up the collection
 
+# set methods
+# the .add() method takes an item of any data type as its arguments and
+# adds that to the set it is called on.
 
+scifi = {"star trek", "star wars", "halo"}
+scifi.add("mass effect")
+print(scifi)
 
+# .remove() takes an item of any data type and removes that item from the
+# set it is called on
 
+fruits = {"apple", "orange", "banana", "tomato"}
+fruits.remove("tomato")
+print(fruits)
+# fruits.remove("pear")
 
+# .discard() does almost the same as remove just no error message
 
+fruits.discard("pear")
+print(fruits)
 
+# .clear() takes no arguments and just gets rid of everything in the set it is called on
 
+mountains = {"Everest", "Kilimanjaro", "Fuji"}
+print(mountains)
+mountains.clear()
+print(mountains)
 
+# The .copy() method returns a copy set that has its own place in memory
+mountains = {"Everest", "Kilimanjaro", "Fuji"}
+set_2 = mountains.copy()
+print(set_2 is mountains)
+print(set_2)
 
+# .union() method allows you to combine all the items from two different
+# sets into a single set
 
+set_1 = {1, 2, 3, 4, 5}
+set_2 = {6, 7, 8, 9, 10}
+# set_3 = set_1.union(set_2)
+# print(set_3)
 
+# could also use the pipe method
 
+set_4 = {11, 12, 13, 14}
+set_5 = {15, 16, 17, 18}
+set_6 = set_4 | set_5
+print(set_6)
 
+# .intersection() is a method that allows you to find out what items two sets have in common
 
+set_7 = {4, 5, 6, 7, 8}
+set_8 = {6, 7, 8, 9, 10}
+# set_9 = set_7.intersection(set_8)
+set_9 = set_7 & set_8
+print(set_9)
 
+# subtraction and .difference() you can subtract one set from another based on their intersection
+# removes the intersection from the set being subtracted from
+set_1 = {4, 5, 6, 7, 8}
+set_2 = {6, 7, 8, 9, 10}
+set_3 = set_1 - set_2
+set_3 = set_1.difference(set_2)
+print(set_3)
 
+# set comprehensions are a third slightly more advanced way to create a set
+comp_1 = {even+2 for even in range(2, 11, 2)}
+print(comp_1)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+comp_2 = {char.lower() for char in "ALLCAPS"}
+print(comp_2)
 
 
 
